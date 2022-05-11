@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #1d1d1d;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: #1d1d1d;
+}
+
+.box-nav{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #ffffff;
+    transition: all .8s;
+    cursor: pointer;
+    position: relative;
+    background: rgb(253,237,58);
+    overflow: hidden;
+}
+
+.box-nav::before{
+    content: 'J'; 
+    position: absolute;
+    top: 0;
+    background: #1d1d1d;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: transform .4s;
+}
+
+.box-nav:nth-child(2)::before{
+    transform: translateY(-100%);
+    content: 'I';
+}
+
+.box-nav:nth-child(3)::before{
+    content: 'N';
+}
+
+.box-nav:nth-child(4)::before{
+    transform: translateY(-100%);
+    content: 'H';
+}
+
+.box-nav:nth-child(5)::before{
+    content: 'A';
+}
+
+.container-nav:hover .box-nav::before{
+    transform: translateY(0);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+.container-footer{
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background:  #1d1d1d;
+    padding: 0 0.4em;
+    color: #fff;
+    border-radius: 20px;
+    position: absolute;
+    box-shadow: 0 0 10px #202020;
+    bottom: 25px;
+}
+
+.container-footer::before{
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: -2.5%;
+    width: 105%;
+    height: 112%;
+    border-radius: 20px;
+    background: linear-gradient(to right, #272727, #2a2a2a);
+    z-index: -1;
+    transition: background 4s;
+}
+
+.container-footer:hover::before{
+    background: linear-gradient(to right, #9d50bb, #6e48aa);
+}
+
+.box-footer{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+.box-footer:hover{
+    transform: translateY(-10px);
+    background: linear-gradient(to right, #9d50bb, #6e48aa);
+}
+
+i{
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+.box-footer:hover i {
+    transform: scale(1.5);
+}
